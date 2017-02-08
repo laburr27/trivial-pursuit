@@ -65,9 +65,9 @@ You can make these improvements and then do something like this to cut your LOC 
 
 $("button").click(function(){
   if ( $(this).attr("data-answer") == "correct" ){
-    $(this).find(".feedback").css("background-color", "green");
+    $(this).parent().find(".feedback").css("background-color", "green");
   } else {
-    $(this).find(".feedback").css("background-color", "red");
+    $(this).parent().find(".feedback").css("background-color", "red");
   }
   score++;
 })

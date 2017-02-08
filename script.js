@@ -1,5 +1,8 @@
 ///James' comments will have triple slashes
 
+
+/// Overall your code is well-formatted and structured. Variables could be more semantically name, and there is some repetitive code that can be replaced with leaner code, but overall the project works as is it is supposed to, and in a logical, fairly clear manner.
+
 $(document).ready(function() {
 
 //get value assigned to a question

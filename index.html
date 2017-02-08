@@ -7,6 +7,11 @@
   </head>
 
   <body>
+    <!-- You have a lot of data stored in your DOM. This a perfectly appropriate starting place, but the better practice is to store this data in a set of javascript objects. As you progress as a developer, you will become more and more used to handling your data in this more object-oriented fashion. It will also simplify the way you write your HTML. You'll only write a kind of template or skeleton for the content. It will also spare from writing repetive code in general. It requires more thought up front, but if you want to make changes to the data in your program, you don't have to hop around your HTML file to do so: instead, you can just modify the values of javascript data.
+
+    I got my start in HTML during the days of tabular layouts. The container-div pattern we saw week 1 is the way to go, and actually should feel similar to using a table, minus the fact that you don't get the grid for free. The container element will replace the table tag. Now, since we don't have the default grid-layout, we might want to use something like flex box. The container has `display: flex;` (or whatever variant of flex) and `flex-direction` css properties.
+
+    Refer here for details: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
     <table>
       <tr class="colorBar">
         <th id="blue"></th>
@@ -20,6 +25,7 @@
       </tr>
       <tr class="answer">
         <td id="blueAnswers">
+          <!-- instead of 0 or 1, I would use something more semantic like 'correct' or 'incorrect' -->
             <button id="bA1" data-ba1="0">Yellow Lab</button>
             <button id="bA2" data-ba2="0">Collie</button>
             <button id="bA3" data-ba3="1">Great Dane</button>

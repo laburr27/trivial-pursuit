@@ -1,3 +1,5 @@
+///James' comments will have triple slashes
+
 $(document).ready(function() {
 
 //get value assigned to a question
@@ -11,6 +13,7 @@ $(document).ready(function() {
 
 // get value assigned to button
 
+  /// I would urge more semantic variable names here
   var blueA1=$("#bA1").attr("data-ba1");
   var blueA2=$("#bA2").attr("data-ba2");
   var blueA3=$("#bA3").attr("data-ba3");
@@ -50,6 +53,22 @@ $(document).ready(function() {
 //user clicks button; COMPARE button value to question value; IF equal THEN change feedback to purple, ELSE change feedback to red
 
 //BLUE Q & A
+
+///you can replace much of your code by refactoring: you have pretty WET/repetitive code here that can be elegantly condensed.
+///Ids and data-attributes are not strictly necessary in your case, although they helped you to write your conditionals. You have question and answer classes, but they are on the things that contain the answers. Switching the individual answers to have the answer class, along with encapsulating your data in javascript, will allow you radically refactor your code.
+
+/*
+You can make these improvements and then do something like this to cut your LOC by 90%:
+
+$("button").click(function(){
+  if ( $(this).attr("data-answer") == "correct" ){
+    $(this).find(".feedback").css("background-color", "green");
+  } else {
+    $(this).find(".feedback").css("background-color", "red");
+  }
+  score++;
+})
+*/
 
 $("#bA1").click(function(){
   if (blueA1 == blueQ1) {
